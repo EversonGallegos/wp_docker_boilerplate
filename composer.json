@@ -1,11 +1,11 @@
 {
-    "name": "sete9zero/sete9zero",
-    "description": "Poker Club",
+    "name": "boilerplate/boilerplate",
+    "description": "Boilerplate for WordPress",
     "type": "project",
-    "license": "proprietary",
+    "license": "free",
     "autoload": {
         "psr-4": {
-            "Sete9zero\\Sete9zero\\": "src/"
+            "boilerplate\\boilerplate\\": "src/"
         }
     },
     "authors": [
