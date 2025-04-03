@@ -1,0 +1,39 @@
+{
+    "name": "sete9zero/sete9zero",
+    "description": "Poker Club",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Sete9zero\\Sete9zero\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "EversonGallegos",
+            "email": "gallegoseverson@gmail.com"
+        }
+    ],
+    "require": {
+        "roots/wordpress": "^6.7",
+        "roots/wordpress-core-installer": "^1.100",
+        "roots/wordpress-no-content": "^6.7"
+    },
+    "config": {
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "mkdir -p ./src/wp-admin ./src/wp-includes",
+            "cp -rf ./wordpress/wp-admin/* ./src/wp-admin/ || true",
+            "cp -rf ./wordpress/wp-includes/* ./src/wp-includes/ || true",
+            "cp -f ./wordpress/*.php ./src/ || true",
+            "rm -rf ./wordpress || true"
+        ]
+    },
+    "extra": {
+        "wordpress-install-dir": "wordpress"
+    }
+}

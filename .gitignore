@@ -1,0 +1,6 @@
+# Dependencies
+/vendor/
+
+# WordPress core
+/src/*
+!/src/wp-content/themes/
